@@ -1,0 +1,32 @@
+{
+    "models": [
+        {
+            "name": "NO-VALUE-PROVIDED",
+            "price": 240000
+        },
+        {
+            "name": "GALLARDO",
+            "price": 266310
+        },
+        {
+            "name": "DIABLO",
+            "price": 499500
+        },
+        {
+            "name": "HURACAN",
+            "price": 378900
+        },
+        {
+            "name": "MURCIELAGO ",
+            "price": 223300
+        },
+        {
+            "name": "AVENTADOR",
+            "price": 754600
+        },
+        {
+            "name": "URUS",
+            "price": 390000
+        }
+    ]
+}
