@@ -5,18 +5,24 @@
 "use strict";
 
 const Alexa = require("ask-sdk-core");
+const https = require("https");
 const i18n = require("i18next");
 const sprintf = require("i18next-sprintf-postprocessor");
-const https = require("https");
+
+const locales = {
+    en: require("./locales/en"),
+    fr: require("./locales/fr"),
+    de: require("./locales/de"),
+    es: require("./locales/es"),
+    it: require("./locales/it"),
+    jp: require("./locales/jp"),
+};
 
 // Constants
 
 // Cryptocompare is CC BY-NC 3.0, you should definitely try it!
 const CRYPTO_PRICE_INFO_API =
     "https://min-api.cryptocompare.com/data/price?fsym={inputSymbol}&tsyms={outputCurrencies}";
-
-const FALLBACK_MESSAGE = `This skill can\'t help you with that.  It can help you learn about Lambo and fancy crypto stuff. What can I help you with?`;
-const FALLBACK_REPROMPT = "What can I help you with?";
 
 // Requests
 
@@ -38,28 +44,37 @@ function getCryptoPriceInfo(symbol, outputCurrencies, callback) {
     req.end();
 }
 
-// I18n
-const languageStrings = {
-    en: {
-        translation: {},
-    },
-    "fr-FR": {
-        translation: {},
-    },
-};
-
 const LocalizationInterceptor = {
     process(handlerInput) {
         const localizationClient = i18n.use(sprintf).init({
             lng: handlerInput.requestEnvelope.request.locale,
-            overloadTranslationOptionHandler: sprintf.overloadTranslationOptionHandler,
-            resources: languageStrings,
-            returnObjects: true,
+            resources: locales,
+            fallbackLng: "en",
         });
 
+        localizationClient.localize = function() {
+            const args = arguments;
+            let values = [];
+
+            for (var i = 1; i < args.length; i++) {
+                values.push(args[i]);
+            }
+            const value = i18n.t(args[0], {
+                returnObjects: true,
+                sprintf: values,
+                postProcess: "sprintf",
+            });
+
+            if (Array.isArray(value)) {
+                return value[Math.floor(Math.random() * value.length)];
+            } else {
+                return value;
+            }
+        };
+
         const attributes = handlerInput.attributesManager.getRequestAttributes();
-        attributes.lc = function(...args) {
-            return localizationClient.lc(...args);
+        attributes.t = function(...args) {
+            return localizationClient.localize(...args);
         };
     },
 };
@@ -74,11 +89,11 @@ const LaunchHandler = {
         return request.type === "LaunchRequest";
     },
     handle(handlerInput) {
+        const attributes = handlerInput.attributesManager.getRequestAttributes();
         const responseBuilder = handlerInput.responseBuilder;
-        const speechOutput = "TEST";
         return responseBuilder
-            .speak(speechOutput)
-            .reprompt(speechOutput)
+            .speak(attributes.t("HELLO"))
+            .reprompt(attributes.t("HELLO"))
             .getResponse();
     },
 };
@@ -108,21 +123,28 @@ const GetCryptoQtForLamboHandler = {
     handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;
         const targetedCryto = slots.cryptocurrency;
-        const lamboPrice = 300000; // Temporary, need to create an online data source
+
+        const lamboModel = ""; // Temporary, need to create an online data source
+        const lamboPrice = 300000; // Same thing
 
         const resolution = targetedCryto.resolutions.resolutionsPerAuthority[0];
         const reliableInfos = resolution.values[0].value;
 
         if (resolution.status.code !== "ER_SUCCESS_MATCH") {
-            throw "Bad resolution";
+            console.log("Bad resolution");
+            return;
         }
         return new Promise((resolve) => {
             getCryptoPriceInfo(reliableInfos.id, "USD", (payload) => {
+                const attributes = handlerInput.attributesManager.getRequestAttributes();
                 const fiatValue = parseFloat(payload.USD);
                 const result = Math.round(10000 * (lamboPrice / fiatValue)) / 10000;
-                const speechOutput = `You need ${result} ${reliableInfos.name} for a lamborghini`;
 
-                resolve(handlerInput.responseBuilder.speak(speechOutput).getResponse());
+                resolve(
+                    handlerInput.responseBuilder
+                        .speak(attributes.t("RES_CRYPTO_QT", result, reliableInfos.name, lamboModel))
+                        .getResponse()
+                );
             });
         });
     },
@@ -141,7 +163,7 @@ const HelpHandler = {
         const requestAttributes = attributesManager.getRequestAttributes();
         return responseBuilder
             .speak(requestAttributes.t("HELP"))
-            .reprompt(requestAttributes.t("HELP"))
+            .reprompt(requestAttributes.t("REPROMPT"))
             .getResponse();
     },
 };
@@ -185,13 +207,14 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         const request = handlerInput.requestEnvelope.request;
+        const attributes = handlerInput.attributesManager.getRequestAttributes();
 
         console.log(`Error handled: ${error.message}`);
-        console.log(` Original request was ${JSON.stringify(request, null, 2)}\n`);
+        console.log(`Original request was ${JSON.stringify(request, null, 2)}\n`);
 
         return handlerInput.responseBuilder
-            .speak("Sorry, I can't understand the command. Please say again.")
-            .reprompt("Sorry, I can't understand the command. Please say again.")
+            .speak(attributes.t("ERROR"))
+            .reprompt(attributes.t("ERROR"))
             .getResponse();
     },
 };
@@ -203,10 +226,12 @@ const FallbackHandler = {
         return request.type === "IntentRequest" && request.intent.name === "AMAZON.FallbackIntent";
     },
 
+    // where are locale safe here, but just in case (future update)
     handle(handlerInput) {
+        const attributes = handlerInput.attributesManager.getRequestAttributes();
         return handlerInput.responseBuilder
-            .speak(FALLBACK_MESSAGE)
-            .reprompt(FALLBACK_REPROMPT)
+            .speak(attributes.t("FALLBACK_MESSAGE"))
+            .reprompt(attributes.t(FALLBACK_REPROMPT))
             .getResponse();
     },
 };
