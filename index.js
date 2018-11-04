@@ -9,6 +9,8 @@ const https = require("https");
 const i18n = require("i18next");
 const sprintf = require("i18next-sprintf-postprocessor");
 
+const localLamboPrices = require("./lambo-prices.json");
+
 const locales = {
     en: require("./locales/en"),
     fr: require("./locales/fr"),
@@ -42,6 +44,20 @@ function getCryptoPriceInfo(symbol, outputCurrencies, callback) {
         });
     });
     req.end();
+}
+
+function getPriceByModel(modelName) {
+    let model = localLamboPrices.models.find((model) => {
+        return modelName.toUpperCase() === model.name.toUpperCase();
+    });
+
+    if (!model) {
+        model = {
+            name: "NO-DATA-FOUND",
+            price: localLamboPrices.models[0].price,
+        };
+    }
+    return model;
 }
 
 const LocalizationInterceptor = {
@@ -123,28 +139,43 @@ const GetCryptoQtForLamboHandler = {
     handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;
         const targetedCryto = slots.cryptocurrency;
+        const targetedCarModel = slots.type;
 
-        const lamboModel = ""; // Temporary, need to create an online data source
-        const lamboPrice = 300000; // Same thing
+        const lamboModel = "NO-INDICATION";
 
-        const resolution = targetedCryto.resolutions.resolutionsPerAuthority[0];
-        const reliableInfos = resolution.values[0].value;
+        const reliableInfos = {
+            crypto: targetedCryto.resolutions.resolutionsPerAuthority[0].values[0].value,
+            model: "NO-VALUE-PROVIDED",
+        };
 
-        if (resolution.status.code !== "ER_SUCCESS_MATCH") {
-            console.log("Bad resolution");
-            return;
+        if (targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
+            reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.type;
         }
+
         return new Promise((resolve) => {
-            getCryptoPriceInfo(reliableInfos.id, "USD", (payload) => {
+            getCryptoPriceInfo(reliableInfos.crypto.id, "USD", (payload) => {
                 const attributes = handlerInput.attributesManager.getRequestAttributes();
                 const fiatValue = parseFloat(payload.USD);
-                const result = Math.round(10000 * (lamboPrice / fiatValue)) / 10000;
 
-                resolve(
-                    handlerInput.responseBuilder
-                        .speak(attributes.t("RES_CRYPTO_QT", result, reliableInfos.name, lamboModel))
-                        .getResponse()
-                );
+                const modelInfos = getPriceByModel(reliableInfos.model);
+                const result = Math.round(10000 * (modelInfos.price / fiatValue)) / 10000;
+
+                let speechOutput = null;
+
+                if (modelInfos.name === "NO-VALUE-PROVIDED" || modelInfos.name === "NO-DATA-FOUND") {
+                    const key =
+                        modelInfos.name === "NO-DATA-FOUND" ? "RES_CRYPTO_QT_NO_D   ATA" : "RES_CRYPTO_QT_NO_MODEL";
+                    speechOutput = attributes.t(key, result, reliableInfos.crypto.name, modelInfos.price);
+                } else {
+                    speechOutput = attributes.t(
+                        "RES_CRYPTO_QT_WITH_MODEL",
+                        result,
+                        reliableInfos.crypto.name,
+                        modelInfos.name
+                    );
+                }
+
+                resolve(handlerInput.responseBuilder.speak(speechOutput).getResponse());
             });
         });
     },
