@@ -9,7 +9,7 @@ This is a WIP o/
 
 V.1.1
 
--   [ ] Implements thet tests along with lambda-local
+-   [ ] Implements the tests along with lambda-local
 -   [ ] Output SSML instead of strings (mainly for some phoneme issues)
 -   [ ] Add another ticker API (fallback)
 -   [x] Migrate the server side to AWS Lambda
