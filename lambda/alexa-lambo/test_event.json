@@ -1,0 +1,107 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": false,
+        "sessionId": "amzn1.echo-api.session.02d3327a-be01-4eab-b24d-71377adbe83a",
+        "application": {
+            "applicationId": "amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.AGNBK4HL2VY4NA7B6A4HSHHGOG7WCNMX5XXFLD5V4O44CDJ45DYISHDWIIBIEKOYPU5FKXTO6S6MFVBNKHORUNCLBOZL56UGV35QOOQTT55YTB5EOY44LYUWE6PI3YDIGZVADXPU2GGNHHAWPV7NZXEKWJ5VRYMCH5DVBCGXIM3ZBQCHTGVMQLF2JKQYDVH7OVLZI4T66KSGSRI"
+        }
+    },
+    "context": {
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.AGNBK4HL2VY4NA7B6A4HSHHGOG7WCNMX5XXFLD5V4O44CDJ45DYISHDWIIBIEKOYPU5FKXTO6S6MFVBNKHORUNCLBOZL56UGV35QOOQTT55YTB5EOY44LYUWE6PI3YDIGZVADXPU2GGNHHAWPV7NZXEKWJ5VRYMCH5DVBCGXIM3ZBQCHTGVMQLF2JKQYDVH7OVLZI4T66KSGSRI"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.AFM6V376LYH3SCLIY4GDPB62YFFG4NRUKNAGFVZLCWUU26F6IHKNGCNEP3U6DK34PHZIKTSRMNJ2WHKWGSIHG42QWR7FHH35FM2TA2ZR25O4J3FI3WBNEO3VV5YQV4QXJDWXBNSQFNCCQUJZUY3DMCNKTHNK7VMBESB2HA2DBHVQJGRYFCYAG",
+                "supportedInterfaces": {}
+            },
+            "apiEndpoint": "https://api.eu.amazonalexa.com",
+            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjVlMGVkNDNiLTc1YWEtNGMwNS04OWQyLWYwY2I2NmIzZmNlZiIsImV4cCI6MTU0MTM3MDk2OCwiaWF0IjoxNTQxMzY3MzY4LCJuYmYiOjE1NDEzNjczNjgsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUZNNlYzNzZMWUgzU0NMSVk0R0RQQjYyWUZGRzROUlVLTkFHRlZaTENXVVUyNkY2SUhLTkdDTkVQM1U2REszNFBIWklLVFNSTU5KMldIS1dHU0lIRzQyUVdSN0ZISDM1Rk0yVEEyWlIyNU80SjNGSTNXQk5FTzNWVjVZUVY0UVhKRFdYQk5TUUZOQ0NRVUpaVVkzRE1DTktUSE5LN1ZNQkVTQjJIQTJEQkhWUUpHUllGQ1lBRyIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFHTkJLNEhMMlZZNE5BN0I2QTRIU0hIR09HN1dDTk1YNVhYRkxENVY0TzQ0Q0RKNDVEWUlTSERXSUlCSUVLT1lQVTVGS1hUTzZTNk1GVkJOS0hPUlVOQ0xCT1pMNTZVR1YzNVFPT1FUVDU1WVRCNUVPWTQ0TFlVV0U2UEkzWURJR1pWQURYUFUyR0dOSEhBV1BWN05aWEVLV0o1VlJZTUNINURWQkNHWElNM1pCUUNIVEdWTVFMRjJKS1FZRFZIN09WTFpJNFQ2NktTR1NSSSJ9fQ.a0Ag22kd0Sa8DPzwklBlcMqT3fUAm_BdM5CM05bnhiQLfcZxRZK8Q6MGFuaDVNsgAOONoy2kCFI9GLjopl-4UP21f8hj9julblxqjKGcOJoxbZbuRV7PQq72ZoEaWtZoQuvR1gNwRx_TzVyYcac3jnlqQkEFd4YFr9Z92RkgWJgAuuaoxexV1aZdxgIsFd_ne3UjgW1FGwA2B6wtVT-Qaljy4cSAVT8Cy7Ke5JN2GnrwH7z5kCDLkptRbniNu2VtBaNAZ48Q7QxthzNHy6MShQjuYnHFAN7IzbM_aIelR6NDcH_g9EHBLcQoX4OzdVW2Li08cGDmKrtZnIWLM2zxBg"
+        },
+        "Viewport": {
+            "experiences": [
+                {
+                    "arcMinuteWidth": 246,
+                    "arcMinuteHeight": 144,
+                    "canRotate": false,
+                    "canResize": false
+                }
+            ],
+            "shape": "RECTANGLE",
+            "pixelWidth": 1024,
+            "pixelHeight": 600,
+            "dpi": 160,
+            "currentPixelWidth": 1024,
+            "currentPixelHeight": 600,
+            "touch": ["SINGLE"]
+        }
+    },
+    "request": {
+        "type": "IntentRequest",
+        "requestId": "amzn1.echo-api.request.e060b9cb-ff6a-407b-b16c-f22085f7e17a",
+        "timestamp": "2018-11-04T21:36:08Z",
+        "locale": "en-US",
+        "intent": {
+            "name": "Amazon.HelpIntent",
+            "confirmationStatus": "NONE",
+            "slots": {
+                "cryptocurrency": {
+                    "name": "cryptocurrency",
+                    "value": "ubq",
+                    "resolutions": {
+                        "resolutionsPerAuthority": [
+                            {
+                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef.CryptoCurrencies",
+                                "status": {
+                                    "code": "ER_SUCCESS_MATCH"
+                                },
+                                "values": [
+                                    {
+                                        "value": {
+                                            "name": "UBIQ",
+                                            "id": "UBQ"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "confirmationStatus": "NONE",
+                    "source": "USER"
+                },
+                "type": {
+                    "name": "type",
+                    "value": "aventador",
+                    "resolutions": {
+                        "resolutionsPerAuthority": [
+                            {
+                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef.LamboModels",
+                                "status": {
+                                    "code": "ER_SUCCESS_MATCH"
+                                },
+                                "values": [
+                                    {
+                                        "value": {
+                                            "name": "Aventador",
+                                            "id": "81e0a5e4df9225810d89dbab210eba3a"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "confirmationStatus": "NONE",
+                    "source": "USER"
+                }
+            }
+        },
+        "dialogState": "STARTED"
+    }
+}
