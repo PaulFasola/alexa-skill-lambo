@@ -1,5 +1,7 @@
 node_modules
 build
+coverage
+package.json.lock
 npm-debug.log
 .env
 .DS_Store
