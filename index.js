@@ -6,6 +6,7 @@
 
 const Alexa = require("ask-sdk-core");
 const https = require("https");
+const humanize = require("humanize-number");
 const i18n = require("i18next");
 const sprintf = require("i18next-sprintf-postprocessor");
 
@@ -141,15 +142,13 @@ const GetCryptoQtForLamboHandler = {
         const targetedCryto = slots.cryptocurrency;
         const targetedCarModel = slots.type;
 
-        const lamboModel = "NO-INDICATION";
-
         const reliableInfos = {
             crypto: targetedCryto.resolutions.resolutionsPerAuthority[0].values[0].value,
             model: "NO-VALUE-PROVIDED",
         };
 
         if (targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
-            reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.type;
+            reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         }
 
         return new Promise((resolve) => {
@@ -158,7 +157,8 @@ const GetCryptoQtForLamboHandler = {
                 const fiatValue = parseFloat(payload.USD);
 
                 const modelInfos = getPriceByModel(reliableInfos.model);
-                const result = Math.round(10000 * (modelInfos.price / fiatValue)) / 10000;
+                let result = Math.round(10000 * (modelInfos.price / fiatValue)) / 10000;
+                result = humanize(result, { delimiter: " ", separator: "," });
 
                 let speechOutput = null;
 
@@ -185,7 +185,7 @@ const HelpHandler = {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
 
-        return request.type === "IntentRequest" && request.intent.name === "AMAZON.HelpIntent";
+        return request.type === "IntentRequest" && request.intent.name === "Amazon.HelpIntent";
     },
     handle(handlerInput) {
         const attributesManager = handlerInput.attributesManager;
@@ -194,7 +194,7 @@ const HelpHandler = {
         const requestAttributes = attributesManager.getRequestAttributes();
         return responseBuilder
             .speak(requestAttributes.t("HELP"))
-            .reprompt(requestAttributes.t("REPROMPT"))
+            .reprompt(requestAttributes.t("HELP_REPROMPT"))
             .getResponse();
     },
 };
