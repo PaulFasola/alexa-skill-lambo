@@ -4,11 +4,21 @@ module.exports = {
         HELLO: [
             "Bien-sûr, précisez la crypto-monnaie et  le modèle de Lamborghini si vous en souhaitez un en particulier. Je vous donnerai la quantité nécessaire actuellement.",
         ],
-        HELP: [],
+        HELP: [
+            `Le fonctionnement est plutôt simple, dites moi dans quelle crypto-monnaie je dois 
+             vous indiquer le montant d'une lambo' et si vous avez un modèle de prédilection, précisez le ! 
+             Par exemple, "Combien de monero pour une lambo' ?" ou "Combien de btc pour une Lamborghini 
+             Diablo ?" ou encore "Combien d'Ubiq pour une Lamborghini ?"`,
+        ],
+        HELP_REPROMPT: [
+            `Maintenant que vous en savez un peu plus, recommençons ! Précisez la crypto-monnaie et le 
+             modèle de Lamborghini si vous en souhaitez un en particulier. Je vous donnerai la quantité 
+             nécessaire actuellement.`,
+        ],
         FALLBACK_REPROMPT: [
             "Cette skill ne peut pas vous aider pour cela. Elle peut vous informer sur le coût d'une lambo en temps réel. Comment puis-je donc vous aider ?",
         ],
-        FALLBACK_MESSAGE: ["What can I help you with?"],
+        FALLBACK_MESSAGE: ["Comment puis-je vous aider ?"],
         RES_CRYPTO_QT_WITH_MODEL: [
             "Actuellement, il faudra %s %s si vous voulez votre Lambo %s.",
             "Pour %s %s, vous pouvez acheter votre Lambo' %s dés maintenant !",
