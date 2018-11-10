@@ -5,7 +5,7 @@ const locales = require("../locales");
 require("dotenv").config();
 
 // Initialization
-alexaTest.initialize(alexaSkill, process.env.ALEXA_SKILL_ID, process.env.ALEXA_ACCOUNT_ID);
+alexaTest.initialize(alexaSkill, process.env.ALEXA_SKILL_ID, process.env.AWS_ACCOUNT_ID);
 alexaTest.initializeI18N(locales);
 
 var assertIfNotGivingResult = (context, response) => {
