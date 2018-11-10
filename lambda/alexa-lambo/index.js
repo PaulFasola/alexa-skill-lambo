@@ -1,5 +1,4 @@
 /* eslint-disable  func-names */
-/* eslint-disable  no-console */
 /* eslint-disable  no-use-before-define */
 
 "use strict";
@@ -10,16 +9,8 @@ const humanize = require("humanize-number");
 const i18n = require("i18next");
 const sprintf = require("i18next-sprintf-postprocessor");
 
+const locales = require("./locales");
 const localLamboPrices = require("./lambo-prices.json");
-
-const locales = {
-    en: require("./locales/en"),
-    fr: require("./locales/fr"),
-    de: require("./locales/de"),
-    es: require("./locales/es"),
-    it: require("./locales/it"),
-    jp: require("./locales/jp"),
-};
 
 // Constants
 
@@ -147,7 +138,7 @@ const GetCryptoQtForLamboHandler = {
             model: "NO-VALUE-PROVIDED",
         };
 
-        if (targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
+        if (targetedCarModel && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
             reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         }
 
