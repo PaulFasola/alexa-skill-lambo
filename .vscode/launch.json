@@ -7,6 +7,20 @@
       "name": "Launch Program",
       "program": "${env:AppData}/npm/node_modules/lambda-local/bin/lambda-local",
       "args": ["-l", "index.js", "-h", "handler", "-e", "test_event.json"]
+    },
+
+    {
+      "name": "Mocha (single file)",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "${env:AppData}/npm/node_modules/mocha/bin/mocha",
+        "--inspect-brk",
+        "${relativeFile}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
     }
   ]
 }
