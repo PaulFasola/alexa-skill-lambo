@@ -35,6 +35,7 @@ module.exports = {
             "%s %s are actually necessary if you want it.",
             "You need %s %s",
         ],
+        STOP: ["Okay, let's stop."],
         ERROR: [
             "Sorry, I can't understand the command. Please say again.",
             "Oupsy, I don't get it... Can you say again ?",

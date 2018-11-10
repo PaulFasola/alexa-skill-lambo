@@ -2,7 +2,7 @@ module.exports = {
     translation: {
         SKILL_NAME: "Aide moi a acheter ma lambo",
         HELLO: [
-            "Bien-sûr, précisez la crypto-monnaie et  le modèle de Lamborghini si vous en souhaitez un en particulier. Je vous donnerai la quantité nécessaire actuellement.",
+            "Bien-sûr, dans quelle crypto-monnaie dois-je vous donner le prix d'une lambo ? Vous pouvez aussi préciser un modèle en particulier.",
         ],
         HELP: [
             `Le fonctionnement est plutôt simple, dites moi dans quelle crypto-monnaie je dois 
@@ -35,6 +35,7 @@ module.exports = {
             "%s %s sont nécéssaires si vous en voulez une.",
             "Il vous faut %s %s",
         ],
+        STOP: ["D'accord, on arrête."],
         ERROR: [
             "Désolé, je n'ai pas compris la commande. Veuillez répéter.",
             "Oups, je n'ai pas compris, pouvez-vous répéter ? ?",
