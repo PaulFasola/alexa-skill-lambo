@@ -1,7 +1,7 @@
 # Alexa, help me buy my lambo!
 
-![android: 6.0.1](https://img.shields.io/badge/version:-1.0-green.svg "version-1.0")
-![building: yes](https://img.shields.io/badge/published:-pending-blue.svg "published-pending")
+![version: 1.0](https://img.shields.io/badge/version:-1.0-green.svg "version-1.0")
+![certification: pending](https://img.shields.io/badge/certification:-pending-blue.svg "certification-pending")
 
 This Alexa skill allows you to get the price of the lambo of your dreams in the crypto-currency of your choice.
 
@@ -64,11 +64,15 @@ TBD.
 V.1.1
 
 - [x] Implements the unit tests
-- [ ] Output SSML instead of strings (mainly for some phoneme issues)
-- [ ] Add another ticker API (fallback)
+- [x] Support a maximum amount of coins (3194 new coins will be injected in the next update)
 - [x] Migrate the server side to AWS Lambda
 - [ ] Add more content (strings) and locales
 - [x] HODL
+
+V.1.2
+
+- [ ] Output SSML instead of strings (mainly for some phoneme issues)
+- [ ] Add another ticker API (fallback)
 
 ## License
 
