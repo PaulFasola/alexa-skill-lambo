@@ -38,7 +38,7 @@ module.exports = {
         STOP: ["D'accord, on arrête."],
         ERROR: [
             "Désolé, je n'ai pas compris la commande. Veuillez répéter.",
-            "Oups, je n'ai pas compris, pouvez-vous répéter ? ?",
+            "Oups, je n'ai pas compris, pouvez-vous répéter ?",
         ],
     },
 };
