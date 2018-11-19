@@ -40,9 +40,10 @@ for (const locale in locales) {
         describe("AMAZON.HelpIntent", () => {
             alexaTest.test([
                 {
-                    request: alexaTest.getIntentRequest("Amazon.HelpIntent"),
+                    request: alexaTest.getIntentRequest("AMAZON.HelpIntent"),
                     saysCallBack: (context, response) => assertIfUnexpectedResponse("HELP", context, response),
                     reprompts: alexaTest.t("HELP_REPROMPT"),
+                    repromptsNothing: false,
                     shouldEndSession: false,
                 },
             ]);

@@ -2,7 +2,7 @@ module.exports = {
     translation: {
         SKILL_NAME: "Ayudame a comprar mi lambo",
         HELLO: [
-            "¿En qué criptomoneda debo darte el precio de una lambo? También puede especificar un modelo en particular.",
+            "¿En qué criptomoneda debo darte el precio de una lambo ? También puede especificar un modelo en particular.",
         ],
         HELP: [
             `La operación es bastante simple, dime en qué criptomoneda debo decirte la cantidad de una lambo y si tienes un modelo favorito, ¡especifícalo!
