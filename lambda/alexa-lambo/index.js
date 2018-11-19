@@ -129,16 +129,16 @@ const GetCryptoQtForLamboHandler = {
     },
 
     handle(handlerInput) {
-        const slots = handlerInput.requestEnvelope.request.intent.slots;
-        const targetedCryto = slots.cryptocurrency;
-        const targetedCarModel = slots.type;
+        const request = handlerInput.requestEnvelope.request;
+        const targetedCryto = request.intent.slots.cryptocurrency;
+        const targetedCarModel = request.intent.slots.type;
 
         const reliableInfos = {
             crypto: targetedCryto.resolutions.resolutionsPerAuthority[0].values[0].value,
             model: "NO-VALUE-PROVIDED",
         };
 
-        if (targetedCarModel && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
+        if (targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
             reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         }
 
@@ -148,14 +148,14 @@ const GetCryptoQtForLamboHandler = {
                 const fiatValue = parseFloat(payload.USD);
 
                 const modelInfos = getPriceByModel(reliableInfos.model);
-                let result = Math.round(10000 * (modelInfos.price / fiatValue)) / 10000;
+                let result = Math.round(10 * (modelInfos.price / fiatValue)) / 10;
                 result = humanize(result, { delimiter: " ", separator: "," });
 
                 let speechOutput = null;
 
                 if (modelInfos.name === "NO-VALUE-PROVIDED" || modelInfos.name === "NO-DATA-FOUND") {
                     const key =
-                        modelInfos.name === "NO-DATA-FOUND" ? "RES_CRYPTO_QT_NO_D   ATA" : "RES_CRYPTO_QT_NO_MODEL";
+                        modelInfos.name === "NO-DATA-FOUND" ? "RES_CRYPTO_QT_NO_DATA" : "RES_CRYPTO_QT_NO_MODEL";
                     speechOutput = attributes.t(key, result, reliableInfos.crypto.name, modelInfos.price);
                 } else {
                     speechOutput = attributes.t(
@@ -176,7 +176,7 @@ const HelpHandler = {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
 
-        return request.type === "IntentRequest" && request.intent.name === "Amazon.HelpIntent";
+        return request.type === "IntentRequest" && request.intent.name === "AMAZON.HelpIntent";
     },
     handle(handlerInput) {
         const attributesManager = handlerInput.attributesManager;
