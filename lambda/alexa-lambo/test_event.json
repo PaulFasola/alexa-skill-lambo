@@ -2,12 +2,12 @@
     "version": "1.0",
     "session": {
         "new": false,
-        "sessionId": "amzn1.echo-api.session.02d3327a-be01-4eab-b24d-71377adbe83a",
+        "sessionId": "amzn1.echo-api.session.5c22616b-b174-43e3-9f52-5e6f8bc73f73",
         "application": {
             "applicationId": "amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef"
         },
         "user": {
-            "userId": "amzn1.ask.account.AGNBK4HL2VY4NA7B6A4HSHHGOG7WCNMX5XXFLD5V4O44CDJ45DYISHDWIIBIEKOYPU5FKXTO6S6MFVBNKHORUNCLBOZL56UGV35QOOQTT55YTB5EOY44LYUWE6PI3YDIGZVADXPU2GGNHHAWPV7NZXEKWJ5VRYMCH5DVBCGXIM3ZBQCHTGVMQLF2JKQYDVH7OVLZI4T66KSGSRI"
+            "userId": "amzn1.ask.account.AFMT464TZK5J54PCXIBB6PZWG7GXLE7V7PQOJIC7ASAUBUIZOMCOBZJYS5FBDBLY62ZE2EA6N5DX63SO2WB7PUXX4NNBOOPG4NK2ORJRMBLPBZ4O55SUWDOK6SSVRYQDGPQT3Y7GTYK7RXEZCQI77B55NI6AD6IO44U6MTGW4SG2EK4VAVI6U6MBXKMEJCUWVM7XPXLPO6S3JTA"
         }
     },
     "context": {
@@ -16,14 +16,14 @@
                 "applicationId": "amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef"
             },
             "user": {
-                "userId": "amzn1.ask.account.AGNBK4HL2VY4NA7B6A4HSHHGOG7WCNMX5XXFLD5V4O44CDJ45DYISHDWIIBIEKOYPU5FKXTO6S6MFVBNKHORUNCLBOZL56UGV35QOOQTT55YTB5EOY44LYUWE6PI3YDIGZVADXPU2GGNHHAWPV7NZXEKWJ5VRYMCH5DVBCGXIM3ZBQCHTGVMQLF2JKQYDVH7OVLZI4T66KSGSRI"
+                "userId": "amzn1.ask.account.AFMT464TZK5J54PCXIBB6PZWG7GXLE7V7PQOJIC7ASAUBUIZOMCOBZJYS5FBDBLY62ZE2EA6N5DX63SO2WB7PUXX4NNBOOPG4NK2ORJRMBLPBZ4O55SUWDOK6SSVRYQDGPQT3Y7GTYK7RXEZCQI77B55NI6AD6IO44U6MTGW4SG2EK4VAVI6U6MBXKMEJCUWVM7XPXLPO6S3JTA"
             },
             "device": {
-                "deviceId": "amzn1.ask.device.AFM6V376LYH3SCLIY4GDPB62YFFG4NRUKNAGFVZLCWUU26F6IHKNGCNEP3U6DK34PHZIKTSRMNJ2WHKWGSIHG42QWR7FHH35FM2TA2ZR25O4J3FI3WBNEO3VV5YQV4QXJDWXBNSQFNCCQUJZUY3DMCNKTHNK7VMBESB2HA2DBHVQJGRYFCYAG",
+                "deviceId": "amzn1.ask.device.AGASEAUYFO55EFMUSHPYWT7IW3SU7BQZD6FAODZ535O5PYWRFJRFXMZSPZAIRTLW2CUSPIOLMOKYS7ADVTUWKDILGHSXWYRCWZPUTVMRV4VQSIWOSHGILHXUVZNNJSYKWXXITG6NLRVURQ26IWAKFPESKQDJQBRFP4IEFR6D2MTLKOS7ZBOYS",
                 "supportedInterfaces": {}
             },
             "apiEndpoint": "https://api.eu.amazonalexa.com",
-            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjVlMGVkNDNiLTc1YWEtNGMwNS04OWQyLWYwY2I2NmIzZmNlZiIsImV4cCI6MTU0MTM3MDk2OCwiaWF0IjoxNTQxMzY3MzY4LCJuYmYiOjE1NDEzNjczNjgsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUZNNlYzNzZMWUgzU0NMSVk0R0RQQjYyWUZGRzROUlVLTkFHRlZaTENXVVUyNkY2SUhLTkdDTkVQM1U2REszNFBIWklLVFNSTU5KMldIS1dHU0lIRzQyUVdSN0ZISDM1Rk0yVEEyWlIyNU80SjNGSTNXQk5FTzNWVjVZUVY0UVhKRFdYQk5TUUZOQ0NRVUpaVVkzRE1DTktUSE5LN1ZNQkVTQjJIQTJEQkhWUUpHUllGQ1lBRyIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFHTkJLNEhMMlZZNE5BN0I2QTRIU0hIR09HN1dDTk1YNVhYRkxENVY0TzQ0Q0RKNDVEWUlTSERXSUlCSUVLT1lQVTVGS1hUTzZTNk1GVkJOS0hPUlVOQ0xCT1pMNTZVR1YzNVFPT1FUVDU1WVRCNUVPWTQ0TFlVV0U2UEkzWURJR1pWQURYUFUyR0dOSEhBV1BWN05aWEVLV0o1VlJZTUNINURWQkNHWElNM1pCUUNIVEdWTVFMRjJKS1FZRFZIN09WTFpJNFQ2NktTR1NSSSJ9fQ.a0Ag22kd0Sa8DPzwklBlcMqT3fUAm_BdM5CM05bnhiQLfcZxRZK8Q6MGFuaDVNsgAOONoy2kCFI9GLjopl-4UP21f8hj9julblxqjKGcOJoxbZbuRV7PQq72ZoEaWtZoQuvR1gNwRx_TzVyYcac3jnlqQkEFd4YFr9Z92RkgWJgAuuaoxexV1aZdxgIsFd_ne3UjgW1FGwA2B6wtVT-Qaljy4cSAVT8Cy7Ke5JN2GnrwH7z5kCDLkptRbniNu2VtBaNAZ48Q7QxthzNHy6MShQjuYnHFAN7IzbM_aIelR6NDcH_g9EHBLcQoX4OzdVW2Li08cGDmKrtZnIWLM2zxBg"
+            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjVlMGVkNDNiLTc1YWEtNGMwNS04OWQyLWYwY2I2NmIzZmNlZiIsImV4cCI6MTU0MjY2MzM0NiwiaWF0IjoxNTQyNjU5NzQ2LCJuYmYiOjE1NDI2NTk3NDYsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUdBU0VBVVlGTzU1RUZNVVNIUFlXVDdJVzNTVTdCUVpENkZBT0RaNTM1TzVQWVdSRkpSRlhNWlNQWkFJUlRMVzJDVVNQSU9MTU9LWVM3QURWVFVXS0RJTEdIU1hXWVJDV1pQVVRWTVJWNFZRU0lXT1NIR0lMSFhVVlpOTkpTWUtXWFhJVEc2TkxSVlVSUTI2SVdBS0ZQRVNLUURKUUJSRlA0SUVGUjZEMk1UTEtPUzdaQk9ZUyIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFGTVQ0NjRUWks1SjU0UENYSUJCNlBaV0c3R1hMRTdWN1BRT0pJQzdBU0FVQlVJWk9NQ09CWkpZUzVGQkRCTFk2MlpFMkVBNk41RFg2M1NPMldCN1BVWFg0Tk5CT09QRzROSzJPUkpSTUJMUEJaNE81NVNVV0RPSzZTU1ZSWVFER1BRVDNZN0dUWUs3UlhFWkNRSTc3QjU1Tkk2QUQ2SU80NFU2TVRHVzRTRzJFSzRWQVZJNlU2TUJYS01FSkNVV1ZNN1hQWExQTzZTM0pUQSJ9fQ.PURI09-thWtLkSS1r3BOEWWsHGItf1URckMTrGmgbbC1wEAMahhH0g7CvGFwV1RwLnlbGw6qSr4w52NbAjIhHKN4HXvRV8qtfF3myS3qorUXPJtaSxwC0mib05jYRWbdPAGru_CqKNOnkbewHOItSMmCg9f-wWcIjkgYBedC4wKC5724f25crzt6TS637XxGo3w1pK5TA9NlyafvziQUZfnA5LxNWGc0u0uY1Bzffxw54JK3RnTCkXdDblLNC1NTYxgJR5hP9Z3Z7g0ptoFbB5b5ef5fSwUahgwLjrMwD82NM_CuHMhjoV7iuGUr4OemPepcZL3_h_-1KyUKhIsXfA"
         },
         "Viewport": {
             "experiences": [
@@ -45,16 +45,16 @@
     },
     "request": {
         "type": "IntentRequest",
-        "requestId": "amzn1.echo-api.request.e060b9cb-ff6a-407b-b16c-f22085f7e17a",
-        "timestamp": "2018-11-04T21:36:08Z",
-        "locale": "en-US",
+        "requestId": "amzn1.echo-api.request.9125e47b-8eba-4b53-a635-6c2ff42e1d05",
+        "timestamp": "2018-11-19T20:35:46Z",
+        "locale": "fr-FR",
         "intent": {
-            "name": "Amazon.HelpIntent",
+            "name": "GetCryptoQtForLamboIntent",
             "confirmationStatus": "NONE",
             "slots": {
                 "cryptocurrency": {
                     "name": "cryptocurrency",
-                    "value": "ubq",
+                    "value": "bitcoin",
                     "resolutions": {
                         "resolutionsPerAuthority": [
                             {
@@ -65,8 +65,14 @@
                                 "values": [
                                     {
                                         "value": {
-                                            "name": "UBIQ",
-                                            "id": "UBQ"
+                                            "name": "Bitcoin",
+                                            "id": "BTC"
+                                        }
+                                    },
+                                    {
+                                        "value": {
+                                            "name": "Bitcoin Cash",
+                                            "id": "BCH"
                                         }
                                     }
                                 ]
@@ -76,29 +82,13 @@
                     "confirmationStatus": "NONE",
                     "source": "USER"
                 },
+                "lambo": {
+                    "name": "lambo",
+                    "confirmationStatus": "NONE"
+                },
                 "type": {
                     "name": "type",
-                    "value": "aventador",
-                    "resolutions": {
-                        "resolutionsPerAuthority": [
-                            {
-                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef.LamboModels",
-                                "status": {
-                                    "code": "ER_SUCCESS_MATCH"
-                                },
-                                "values": [
-                                    {
-                                        "value": {
-                                            "name": "Aventador",
-                                            "id": "81e0a5e4df9225810d89dbab210eba3a"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "confirmationStatus": "NONE",
-                    "source": "USER"
+                    "confirmationStatus": "NONE"
                 }
             }
         },

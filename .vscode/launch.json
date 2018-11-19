@@ -4,9 +4,16 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Lambda-local",
       "program": "${env:AppData}/npm/node_modules/lambda-local/bin/lambda-local",
-      "args": ["-l", "index.js", "-h", "handler", "-e", "test_event.json"]
+      "args": [
+        "-l",
+        "lambda/alexa-lambo/index.js",
+        "-h",
+        "handler",
+        "-e",
+        "lambda/alexa-lambo/test_event.json"
+      ]
     },
 
     {
