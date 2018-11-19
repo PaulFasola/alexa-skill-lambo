@@ -2,10 +2,10 @@ module.exports = {
     translation: {
         SKILL_NAME: "help me buy my Lambo",
         HELLO: [
-            "Sure! In which crypto-currency do you want the amount ? You can also indicate me the model of the lambo you want!",
+            "In which crypto-currency do you want the amount of a lambo ? You can also indicate me the model of the lambo you want!",
         ],
         HELP: [
-            `This skill is simple, just tell me in which crypto I have to tell you the 
+            `This is fairly simple, just tell me in which crypto I have to tell you the 
              price of the lambo and the desired model if you have it. Let me tell you 
              an example. "How much Ethereum for a lambo?" or "How much btc for a Lamborghini 
              Diablo?" and finally "How much Ubiq for a Lamborghini?"`,
@@ -36,9 +36,6 @@ module.exports = {
             "You need %s %s",
         ],
         STOP: ["Okay, let's stop."],
-        ERROR: [
-            "Sorry, I can't understand the command. Please say again.",
-            "Oupsy, I don't get it... Can you say again ?",
-        ],
+        ERROR: ["Oupsy, I don't get it... In which crypto-currency do you want the amount ?"],
     },
 };

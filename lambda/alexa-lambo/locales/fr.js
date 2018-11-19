@@ -2,13 +2,13 @@ module.exports = {
     translation: {
         SKILL_NAME: "Aide moi a acheter ma lambo",
         HELLO: [
-            "Bien-sûr, dans quelle crypto-monnaie dois-je vous donner le prix d'une lambo ? Vous pouvez aussi préciser un modèle en particulier.",
+            "Dans quelle crypto-monnaie dois-je vous donner le prix d'une lambo ? Vous pouvez aussi préciser un modèle en particulier.",
         ],
         HELP: [
             `Le fonctionnement est plutôt simple, dites moi dans quelle crypto-monnaie je dois 
              vous indiquer le montant d'une lambo' et si vous avez un modèle de prédilection, précisez le ! 
-             Par exemple, "Combien de monero pour une lambo' ?" ou "Combien de btc pour une Lamborghini 
-             Diablo ?" ou encore "Combien d'Ubiq pour une Lamborghini ?"`,
+             Par exemple, "Combien de monero pour une lambo' ?" ou encore "Combien de bitcoin pour une Lamborghini 
+             Diablo ?""`,
         ],
         HELP_REPROMPT: [
             `Maintenant que vous en savez un peu plus, recommençons ! Précisez la crypto-monnaie et le 
@@ -37,8 +37,7 @@ module.exports = {
         ],
         STOP: ["D'accord, on arrête."],
         ERROR: [
-            "Désolé, je n'ai pas compris la commande. Veuillez répéter.",
-            "Oups, je n'ai pas compris, pouvez-vous répéter ?",
+            "Oups, je n'ai pas compris, dans quelle crypto-monnaie souhaitez-vous que je vous donne le montant d'une Lamborghini ?",
         ],
     },
 };
