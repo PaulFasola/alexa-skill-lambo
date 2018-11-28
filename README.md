@@ -1,11 +1,14 @@
 # Alexa, help me buy my lambo!
 
 ![version: 1.0](https://img.shields.io/badge/version:-1.0-green.svg "version-1.0")
-![certification: pending](https://img.shields.io/badge/certification:-pending-blue.svg "certification-pending")
+![certification: done](https://img.shields.io/badge/certification:-done-green.svg "certification-done")
 
 This Alexa skill allows you to get the price of the lambo of your dreams in the crypto-currency of your choice.
 
 This is a WIP o/ (and this is only for fun / Alexa skill dev. discovery)
+
+## Get it on Amazon 
+[Amazon US](https://www.amazon.com/dp/B07KWB41M2) | [Amazon France](https://www.amazon.com/dp/B07KWB41M2)
 
 ## Getting Started
 
@@ -66,13 +69,13 @@ V.1.1
 - [x] Implements the unit tests
 - [x] Support a maximum amount of coins (3194 new coins will be injected in the next update)
 - [x] Migrate the server side to AWS Lambda
-- [ ] Add more content (strings) and locales
 - [x] HODL
 
 V.1.2
 
+- [ ] Add another ticker API (that will act as a fallback)
 - [ ] Output SSML instead of strings (mainly for some phoneme issues)
-- [ ] Add another ticker API (fallback)
+- [ ] Add more content (strings) and locales
 
 ## License
 
