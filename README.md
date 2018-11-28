@@ -8,7 +8,8 @@ This Alexa skill allows you to get the price of the lambo of your dreams in the 
 This is a WIP o/ (and this is only for fun / Alexa skill dev. discovery)
 
 ## Get it on Amazon 
-[Amazon US](https://www.amazon.com/dp/B07KWB41M2) | [Amazon France](https://www.amazon.com/dp/B07KWB41M2)
+
+[Amazon US](https://www.amazon.com/dp/B07KWB41M2) | [Amazon France](https://www.amazon.fr/dp/B07KWB41M2)
 
 ## Getting Started
 
