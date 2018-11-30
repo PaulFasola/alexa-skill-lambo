@@ -138,7 +138,7 @@ const GetCryptoQtForLamboHandler = {
             model: "NO-VALUE-PROVIDED",
         };
 
-        if (targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
+        if (targetedCarModel && targetedCarModel.resolutions && targetedCarModel.resolutions.resolutionsPerAuthority.length > 0) {
             reliableInfos.model = targetedCarModel.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         }
 
