@@ -5,8 +5,9 @@
     "scripts": {
         "setup": "npm install && setup",
         "create-pkg": ".\\node_modules\\.bin\\lambda-local package -l alexa-lambo -e event.json",
-        "deploy": "npm run-script create-pkg && .\\node_modules\\.bin\\lambda-local deploy",
-        "test": "mocha test"
+        "deploy:dev": "sls --stage=dev deploy",
+        "deploy:prod": "sls --stage=prod deploy",
+        "test": "mocha test --reporter spec"
     },
     "dependencies": {
         "ask-sdk-core": "^2.2.0",
