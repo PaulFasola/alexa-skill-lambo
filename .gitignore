@@ -5,3 +5,4 @@ package.json.lock
 npm-debug.log
 .env
 .DS_Store
+.serverless
