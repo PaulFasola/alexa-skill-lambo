@@ -2,6 +2,7 @@
 
 ![version: 1.0](https://img.shields.io/badge/version:-1.0-green.svg "version-1.0")
 ![certification: done](https://img.shields.io/badge/certification:-done-green.svg "certification-done")
+[![Build Status](https://travis-ci.org/PaulFasola/alexa-skill-lambo.svg?branch=master)](https://travis-ci.org/PaulFasola/alexa-skill-lambo)
 
 This Alexa skill allows you to get the price of the lambo of your dreams in the crypto-currency of your choice.
 
