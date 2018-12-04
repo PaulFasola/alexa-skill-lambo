@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- node
+
+package:
+  exclude:
+    - config/dev.skill.config.json
+    - config/prod.skill.config.json    
+    - node_modules/mocha/**
+
+
+cache:
+  directories:
+    - node_modules
+script: 
+    - npm install -g serverless
+    - npm test
+    - sls deploy
