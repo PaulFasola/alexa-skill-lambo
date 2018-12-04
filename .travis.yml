@@ -21,7 +21,6 @@ script:
 
 deploy:
   provider: script
-  script: "cd lambda/alexa-lambo/ && npm run-script deploy:dev"
+  script: "npm run-script deploy:dev"
   on:
     branch: master
-    tags: true
