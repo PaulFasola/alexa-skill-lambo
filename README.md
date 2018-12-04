@@ -22,7 +22,7 @@ See deployment for instructions on how to get it live.
 For testing and deploying purposes, you will need Mocha and Lambda-Local installed globally.
 
 ```
-    npm i -g mocha lamda-local
+    npm i -g mocha lambda-local
 ```
 
 ### Installing

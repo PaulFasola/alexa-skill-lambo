@@ -1,3 +1,6 @@
+service:
+  name: alexa-skills
+   
 frameworkVersion: ">=1.4.0 <2.0.0"
 
 # key: ${optional_var}, default_val
@@ -14,4 +17,4 @@ functions:
     handler: index.handler
     events:
       - alexaSkill:
-          appId: ${file(./utils/deployment/config.${self:provider.stage}.json):APP_ID}
+          appId: amzn1.ask.skill.5e0ed43b-75aa-4c05-89d2-f0cb66b3fcef # for testing purposes only

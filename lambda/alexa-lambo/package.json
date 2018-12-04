@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "setup": "npm install && setup",
         "create-pkg": ".\\node_modules\\.bin\\lambda-local package -l alexa-lambo -e event.json",
         "deploy:dev": "sls --stage=dev deploy",
         "deploy:prod": "sls --stage=prod deploy",
